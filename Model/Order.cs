@@ -50,7 +50,7 @@ namespace Model
         public void SaveItemsToDB()
         {
             OrderItemDB db = new OrderItemDB();
-            foreach(OrderItem item in ItemList)
+            foreach (OrderItem item in ItemList)
             {
                 item.Order = new Order(this);
                 item.Item.Update(item.Item.ItemName, item.Item.ItemPrice, item.Item.ItemStock - item.Amount, item.Item.ItemImage, item.Item.ItemDescription);
@@ -63,7 +63,7 @@ namespace Model
             int id = this.OrderID;
             OrderItemDB itemDB = new OrderItemDB();
 
-            ItemList= itemDB.SelectByOrderID(id);
+            ItemList = itemDB.SelectByOrderID(id);
         }
     }
 }

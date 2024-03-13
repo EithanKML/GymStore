@@ -24,7 +24,7 @@ namespace ViewModel
 
         public BaseDB()
         {
-            connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Project\GymStore\GymStore\ViewModel\App_Data\Project.accdb";
+            connString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Source\Repos\EithanKML\GymStore\ViewModel\App_Data\Project.accdb";
             conn = new OleDbConnection(connString);
             command = new OleDbCommand();
             command.Connection = conn;

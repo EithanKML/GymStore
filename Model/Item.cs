@@ -97,7 +97,7 @@ namespace Model
             {
                 Categories.Add(category);
             }
-            
+
         }
 
         public void RemoveCategory(Category category)
@@ -107,7 +107,7 @@ namespace Model
 
             if (db.Delete(ic) > 0)
             {
-                Categories.RemoveAt(Categories.FindIndex(x=>x.CategoryID == category.CategoryID));
+                Categories.RemoveAt(Categories.FindIndex(x => x.CategoryID == category.CategoryID));
             }
         }
     }

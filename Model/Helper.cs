@@ -43,17 +43,17 @@ namespace Model
         public static ItemList AllItems()
         {
             ItemDB db = new ItemDB();
-            ItemList lst=db.SelectAll();
+            ItemList lst = db.SelectAll();
             foreach (Item item in lst)
             {
-               item.LoadCategories();
+                item.LoadCategories();
             }
             return lst;
         }
 
         public static CategoryList AllCategories()
         {
-            
+
             CategoryDB categoryDB = new CategoryDB();
 
             return categoryDB.SelectAll();

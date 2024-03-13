@@ -97,7 +97,8 @@ namespace Model
             if (db.Insert(o) > 0)
             {
                 Orders.Add(o);
-                return o; }
+                return o;
+            }
             return null;
 
         }
