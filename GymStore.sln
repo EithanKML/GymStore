@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymStore", "GymStore\GymStore.csproj", "{6491FCBB-DF72-4E0E-B1AC-DD869D7D2A0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{AD70DBDF-9B9A-456F-92CD-0CBC20301FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{05768B2E-6512-4108-91AD-4E9AD35E746F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6491FCBB-DF72-4E0E-B1AC-DD869D7D2A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6491FCBB-DF72-4E0E-B1AC-DD869D7D2A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6491FCBB-DF72-4E0E-B1AC-DD869D7D2A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6491FCBB-DF72-4E0E-B1AC-DD869D7D2A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD70DBDF-9B9A-456F-92CD-0CBC20301FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD70DBDF-9B9A-456F-92CD-0CBC20301FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD70DBDF-9B9A-456F-92CD-0CBC20301FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD70DBDF-9B9A-456F-92CD-0CBC20301FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05768B2E-6512-4108-91AD-4E9AD35E746F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05768B2E-6512-4108-91AD-4E9AD35E746F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05768B2E-6512-4108-91AD-4E9AD35E746F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05768B2E-6512-4108-91AD-4E9AD35E746F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6440FC77-0816-4DD9-B0ED-CF4546A02C94}
+	EndGlobalSection
+EndGlobal

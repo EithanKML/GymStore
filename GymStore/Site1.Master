@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GymStore.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title>Gym Store</title>
+    
+
+    <link href="StyleSheet1.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">     
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <center>
+            <asp:Panel ID="PanelMenu" runat="server">
+                
+                 <table style="background-color:dimgray; width:100%; text-align:center; height:100px; font-family:Impact; float:left">
+                 <tr>
+
+                 <td style="color:ghostwhite; font-size:50px; float:left">
+
+                        <asp:ImageButton ID="wishlistbutt" runat="server" ImageUrl="photos/blackheart.png" CssClass="masterbutts" OnClick="wishlistbutt_Click"/>
+                        <asp:ImageButton ID="cartbutt" runat="server" ImageUrl="photos/cartimage.png" CssClass="masterbutts" OnClick="cartbutt_Click"/>
+                        <asp:Label ID="itemsamountincart" runat="server" Text="" CssClass="masterbutts"></asp:Label>
+
+                 </td>
+                     </tr>
+                     </table>
+                     <table style="background-color:dimgray; width:100%; text-align:center; height:100px; font-family:Impact;">
+                         <tr>
+                 <td style="color:ghostwhite; font-size:100px;">
+
+                        <asp:Label ID="Title" runat="server" Text="WELCOME"></asp:Label>
+
+                 </td>
+                        
+                 </tr>
+                 </table>
+
+                    <table style="background-color:dimgray; width:100%; text-align:center; height:100px; font-family:Impact">
+
+                        <tr>
+
+                            <%if (Session["customer"] == null)
+   { %>
+
+                            <th><asp:Button ID="loginbutt" runat="server" Text="Login" CssClass="button" OnClick="loginbutt_Click"  CausesValidation="false"/></th>
+                            <th><asp:Button ID="signupbutt" runat="server" Text="Sign Up" CssClass="button" OnClick="signupbutt_Click"/></th>
+                            <th><asp:Button ID="storebutt1" runat="server" Text="Store" CssClass="button" OnClick="storebutt_Click"  CausesValidation="false"/></th>
+
+                            <%} %>
+
+                    <%if (Session["customer"] != null)
+                       { %>
+                       
+                       <th><asp:Button ID="storebutt2" runat="server" Text="Store" CssClass="button" OnClick="storebutt_Click"/></th>
+                       
+                       <%if (Session["admin"] != null)
+                       { %>
+
+                       <th><asp:Button ID="itemsbutt" runat="server" Text="Items" CssClass="button" OnClick="itemsbutt_Click"/></th>
+
+                       <%} %>
+
+                       <th><asp:Button ID="profilebutt" runat="server" Text="Profile" CssClass="button" OnClick="profilebutt_Click"/></th>
+
+                       <th><asp:Button ID="logoutbutt" runat="server" Text="Logout" CssClass="button" OnClick="logoutbutt_Click"/></th>
+
+                       </tr>
+                       <%} %>
+                </table>
+            </asp:Panel>
+                </center>
+
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+
+</html>

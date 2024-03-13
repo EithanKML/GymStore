@@ -1,0 +1,76 @@
+﻿body {
+    background-color: white
+}
+
+h3 {
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+    font-weight: bold;
+    color: black
+}
+
+h1 {
+    font-family: 'Comic Sans MS';
+    font-size: 14px;
+    font-weight: bold;
+    color: black
+}
+
+h2 {
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+    font-weight: bold;
+    color: black
+}
+
+h4 {
+    float: left;
+    height: 10px;
+    width: 10px;
+}
+
+h2:hover{
+    background-color:black
+}
+
+.imagestyle {
+    object-fit: cover;
+}
+
+.masterbutts {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+a{
+    width: fit-content;
+}
+
+.heart {
+    
+    width: 20px;
+    height: 20px
+}
+
+.button {
+    border-radius:15px;
+    padding:25px;
+    background-color:dimgray;
+    color:white;
+    border:none;
+    transition:ease-in-out 0.5s;
+    font-family: 'Rubik', sans-serif;
+    font-weight:700;
+    width:300px;
+}
+
+.button:focus {
+    outline:none;
+}
+
+.button:hover {
+    color:black;
+    background-color:white;
+    transition:ease-in-out 0.5s;
+}
