@@ -35,6 +35,11 @@ namespace GymStore
                     AmountDDL.Items.Add(new ListItem(i.ToString(),i.ToString()));
                 }
 
+                for (int i = 1; i <= 5; i++)
+                {
+                    RatingList.Items.Add(new ListItem(i.ToString(), i.ToString()));
+                }
+
                 OrderItemList cart = (OrderItemList)Session["cart"];
                 if (cart != null)
                 {
@@ -89,6 +94,35 @@ namespace GymStore
                 Response.Redirect("HomePage.aspx");
             }
 
+        }
+
+        protected void RatePanelButton_Click(object sender, EventArgs e)
+        {
+            if (RatePanel.Visible == false)
+            {
+                RatePanelButt.Text = "No";
+                RatePanel.Visible = true;
+            }
+            else
+            {
+                RatePanelButt.Text = "Yes";
+                RatePanel.Visible = false;
+            }
+            
+
+        }
+
+        protected void SubmitRating_Click(object sender, EventArgs e)
+        {
+            int rate = int.Parse(RatingList.SelectedValue.ToString());
+            Customer c = (Customer)Session["customer"];
+            Item item = (Item)Session["selecteditem"];
+            string text = RateNotes.Text;
+
+            c.AddRating(rate, item, text);
+
+            RatePanel.Visible = false;
+            Successmsg.Visible = true;
         }
     }
 }

@@ -41,6 +41,7 @@ namespace Model
         {
             Orders = new OrderList();
             Wishlist = new ItemList();
+            Ratings = new RatingList();
         }
         
         public Customer(Customer copy)
@@ -55,6 +56,8 @@ namespace Model
             IsAdmin = copy.IsAdmin;
             Orders = copy.Orders;
             Wishlist = new ItemList();
+            Ratings = new RatingList();
+
         }
 
         public Customer(int id, string name, string phone, string email, string address, string password, string pfp, bool isadmin)
@@ -69,6 +72,8 @@ namespace Model
             IsAdmin = isadmin;
             Orders = new OrderList();
             Wishlist = new ItemList();
+            Ratings = new RatingList();
+
         }
 
         public bool Update(string name, string phone, string email, string address, string password, string pfp, bool isadmin)
@@ -135,6 +140,18 @@ namespace Model
             db.Delete(c);
 
             Wishlist.Remove(item);
+        }
+
+        public void AddRating(int rate, Item item, string text)
+        {
+
+            RatingDB ratingDB = new RatingDB();
+            Rating rating = new Rating(this, item, DateTime.Now, text, rate);
+
+            ratingDB.Insert(rating);
+
+            Ratings.Add(rating);
+
         }
     }
 }

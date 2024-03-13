@@ -14,7 +14,17 @@
     Description: <asp:Label ID="ShowItemDescription" runat="server" Text=""></asp:Label><br />
         <asp:DropDownList ID="AmountDDL" runat="server"></asp:DropDownList>
         <asp:Button ID="AddToCart" runat="server" Text="Add To Cart" OnClick="AddToCart_Click"/>
+        
+        <br /><br /><br />
 
+        Would You Like To Rate The Product?<br />
+        <asp:Button ID="RatePanelButt" runat="server" Text="Yes" OnClick="RatePanelButton_Click"/><br />
+        <asp:Panel ID="RatePanel" runat="server" Visible="false">
+            <asp:DropDownList ID="RatingList" runat="server"></asp:DropDownList><br /><br />
+            <asp:TextBox ID="RateNotes" runat="server" Width="100px" Height="50px"></asp:TextBox><br /><br />
+            <asp:Button ID="SubmitRating" runat="server" Text="Submit Rating" OnClick="SubmitRating_Click"/><br /><br />
+        </asp:Panel>
+        <asp:Label ID="Successmsg" runat="server" Text="Rating Added!" Visible="false"></asp:Label>
 
     </center>
 </asp:Content>
